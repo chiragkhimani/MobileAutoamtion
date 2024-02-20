@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>ExpediaAutomation</td>
+              <td>1</td>
+            <td>17 Oct 2023, 15:14</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">com.automation.steps.FlightSearchLandingSteps.clickOnDateSelectionCard()</td>
+              <td>1</td>
+              <td class="duration" data-value="1429073800">1s 429ms</td>
+              <td class="duration" data-value="1429073800">1s 429ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.FlightSearchLandingSteps.clickOnSearchButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="861955400">861ms</td>
+              <td class="duration" data-value="861955400">861ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.FlightSearchLandingSteps.click_on_continue_button()</td>
+              <td>3</td>
+              <td class="duration" data-value="1883899800">1s 883ms</td>
+              <td class="duration" data-value="627966600">627ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.FlightSearchLandingSteps.flightDateFrom(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="4078763300">4s 078ms</td>
+              <td class="duration" data-value="4078763300">4s 078ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.FlightSearchLandingSteps.flight_destination_to(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="9600192400">9s 600ms</td>
+              <td class="duration" data-value="3200064133">3s 200ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.FlightSearchLandingSteps.select_date_to(java.lang.String,java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="14207035200">14s 207ms</td>
+              <td class="duration" data-value="4735678400">4s 735ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.FlightSearchLandingSteps.user_enters_the_flight_source_to(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="16470243300">16s 470ms</td>
+              <td class="duration" data-value="5490081100">5s 490ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.FlightSearchLandingSteps.verify_flights_search_landing_page_is_displayed()</td>
+              <td>4</td>
+              <td class="duration" data-value="4895736700">4s 895ms</td>
+              <td class="duration" data-value="1223934175">1s 223ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.FlightSearchResultSteps.verify_flight_search_result_is_displayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="19358305700">19s 358ms</td>
+              <td class="duration" data-value="19358305700">19s 358ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HomeSteps.userTapOnStaysTab()</td>
+              <td>1</td>
+              <td class="duration" data-value="1123165400">1s 123ms</td>
+              <td class="duration" data-value="1123165400">1s 123ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HomeSteps.user_click_on_travellers_tab()</td>
+              <td>1</td>
+              <td class="duration" data-value="1274052400">1s 274ms</td>
+              <td class="duration" data-value="1274052400">1s 274ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HomeSteps.user_opens_application()</td>
+              <td>5</td>
+              <td class="duration" data-value="58042759500">58s 042ms</td>
+              <td class="duration" data-value="11608551900">11s 608ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HomeSteps.user_tap_on_flights_tab()</td>
+              <td>4</td>
+              <td class="duration" data-value="6813750600">6s 813ms</td>
+              <td class="duration" data-value="1703437650">1s 703ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HomeSteps.verifyDateCardErrorMessageIsDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="858733700">858ms</td>
+              <td class="duration" data-value="858733700">858ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HomeSteps.verifySearchErrorWithErrorMessageIsDisplayed(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1222960800">1s 222ms</td>
+              <td class="duration" data-value="1222960800">1s 222ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HomeSteps.verify_user_is_on_home_screen()</td>
+              <td>5</td>
+              <td class="duration" data-value="5523250000">5s 523ms</td>
+              <td class="duration" data-value="1104650000">1s 104ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.Hooks.cleanUp()</td>
+              <td>5</td>
+              <td class="duration" data-value="3845496300">3s 845ms</td>
+              <td class="duration" data-value="769099260">769ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.Hooks.setUp()</td>
+              <td>5</td>
+              <td class="duration" data-value="88134032200">1m 28s 134ms</td>
+              <td class="duration" data-value="17626806440">17s 626ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.StaySearchResultSteps.verifyStaysSearchResultIsDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="7960019600">7s 960ms</td>
+              <td class="duration" data-value="7960019600">7s 960ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.StaysSearchLandingSteps.userEntersTheStayLocation(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3899095900">3s 899ms</td>
+              <td class="duration" data-value="3899095900">3s 899ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TravellersLandingSteps.verify_default_value_of_adults_is(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="188737100">188ms</td>
+              <td class="duration" data-value="188737100">188ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TravellersLandingSteps.verify_default_value_of_children_is(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="310370400">310ms</td>
+              <td class="duration" data-value="310370400">310ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TravellersLandingSteps.verify_default_value_of_infants_is(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="290719200">290ms</td>
+              <td class="duration" data-value="290719200">290ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TravellersLandingSteps.verify_default_value_of_youths_is(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="316249000">316ms</td>
+              <td class="duration" data-value="316249000">316ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TravellersLandingSteps.verify_user_is_on_travellers_selection_landing()</td>
+              <td>1</td>
+              <td class="duration" data-value="1275726900">1s 275ms</td>
+              <td class="duration" data-value="1275726900">1s 275ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>25</td>
+            <td>55</td>
+            <td class="duration">4m 13s 864ms</td>
+            <td class="duration">4s 615ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
